@@ -46,8 +46,8 @@ def main():
 
 
 if __name__ == '__main__':
-    start_time = datetime.now()
+    # start_time = datetime.now()
     main()
-    end_time = datetime.now()
-    print(f'Итоговое время выполнения: {end_time - start_time} секунд.')
+    # end_time = datetime.now()
+    # print(f'Итоговое время выполнения: {end_time - start_time} секунд.')
     list_dir(CATS_DIR)
