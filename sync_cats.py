@@ -18,7 +18,7 @@ def get_new_image():
 def download_file(url):
     filename = url.split('/')[-1]
     response = requests.get(url)
-    response.raise_for_status()  # Проверка, что запрос выполнен успешно. Нужно ли?
+    response.raise_for_status()  # Проверка, что запрос выполнен успешно
     with open(CATS_DIR / filename, 'wb') as file:
         file.write(response.content)
 
@@ -46,8 +46,8 @@ def main():
 
 
 if __name__ == '__main__':
-    # start_time = datetime.now()
+    start_time = datetime.now()
     main()
-    # end_time = datetime.now()
-    # print(f'Итоговое время выполнения: {end_time - start_time} секунд.')
+    end_time = datetime.now()
+    print(f'Итоговое время выполнения: {end_time - start_time}.')
     list_dir(CATS_DIR)
