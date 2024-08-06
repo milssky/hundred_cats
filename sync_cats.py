@@ -9,7 +9,7 @@ URL = 'https://api.thecatapi.com/v1/images/search'
 CATS_DIR = CATS_DIR = BASE_DIR / 'cats'
 
 
-def get_new_image():
+def get_new_image_url():
     response = requests.get(URL).json()
     random_cat = response[0].get('url')
     return random_cat
@@ -24,7 +24,7 @@ def download_file(url):
 
 
 def download_new_cat_image():
-    url = get_new_image()
+    url = get_new_image_url()
     download_file(url)
 
 
